@@ -1,48 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/estilos.css">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
     <title>Servicios</title>
 </head>
 <body>
-    <div class="tabla-contenido">
-        <h2>Servicios de paseos</h2>
-        <table>
-            <thead>
-                <tr>
-                    <th>Día</th>
-                    <th>Lunes</th>
-                    <th>Martes</th>
-                    <th>Miercoles</th>
-                    <th>Jueves</th>
-                    <th>Viernes</th>
-                    <th>Sábado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <th>Horario</th>
-                    <td>9 a 12 - 16 a 18</td>
-                    <td>9 a 12 - 16 a 18</td>
-                    <td>9 a 12 - 16 a 18</td>
-                    <td>9 a 12 - 16 a 18</td>
-                    <td>9 a 12 - 16 a 18</td>
-                    <td>9 a 12 - 16 a 18</td>
-                </tr>
-                <tr>
-                    <th>Paseador</th>
-                    <td>Juan Perez</td>
-                    <td>Lucas Díaz</td>
-                    <td>Juan Perez</td>
-                    <td>María Gomez</td>
-                    <td>Lucas Díaz</td>
-                    <td>Roberto Vazquez</td>
-                </tr>
-            </tbody>
-        </table>
+    <header th:replace="~{layouts/header :: header}"></header>
+    <nav th:replace="~{layouts/nav :: nav}"></nav>
+
+    <div class="seccion-contenido">
+        <div class="tabla-contenido">
+            <div class="titulo-paseos">
+                <h2>Servicios de paseos</h2>
+                <a th:href="@{/paseos/nuevo}"  class="btn-nuevo-paseo">Agregar</a>
+
+            </div>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Día</th>
+                        <th>Lunes</th>
+                        <th>Martes</th>
+                        <th>Miercoles</th>
+                        <th>Jueves</th>
+                        <th>Viernes</th>
+                        <th>Sábado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th>Horario</th>
+                        <td>9 a 12 - 16 a 18</td>
+                        <td>9 a 12 - 16 a 18</td>
+                        <td>9 a 12 - 16 a 18</td>
+                        <td>9 a 12 - 16 a 18</td>
+                        <td>9 a 12 - 16 a 18</td>
+                        <td>9 a 12 - 16 a 18</td>
+                    </tr>
+                    <tr>
+                        <th>Paseador</th>
+                        <td>Juan Perez</td>
+                        <td>Lucas Díaz</td>
+                        <td>Juan Perez</td>
+                        <td>María Gomez</td>
+                        <td>Lucas Díaz</td>
+                        <td>Roberto Vazquez</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="tabla-contenido">
+            <h2>Listado de Paseadores</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Apellido y Nombre</th>
+                        <th>Horario</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each="paseador : ${listadoPaseadores}">
+                        <td th:text="${paseador.id}"></td>
+                        <td th:text="${paseador.apellido+', '+ paseador.nombre}"></td>
+                        <td th:text="${paseador.horario}"></td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
+
+    <footer th:replace="~{layouts/footer :: footer}"></footer>
 </body>
 </html>

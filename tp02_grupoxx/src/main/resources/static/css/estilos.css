@@ -154,3 +154,19 @@ tbody tr th {
 tbody tr:hover {
     background: rgba(71, 231, 236, 0.4);
 }
+
+.btn-nuevo-paseo {
+    padding: 1rem 2rem;
+    background-color: #1b3d46;
+    color: #e9f8f4;
+    text-decoration: none;
+    margin-left: 30%;
+}
+
+.titulo-paseos {
+    display: flex;
+    /* width: 90%; */
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
