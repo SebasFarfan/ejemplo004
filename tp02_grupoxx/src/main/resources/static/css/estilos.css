@@ -1,0 +1,172 @@
+/* diseño de la página index.html */
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+
+body {        
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: linear-gradient(#e9f8f4, #c7dbe0);
+}
+
+
+header {
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(128,201,185,1) 35%, rgba(0,212,255,1) 100%);
+    /* margin: 2%; */
+    padding: 5px 5px;    
+
+}
+
+h1 {
+    color: cornsilk;
+    font-size: 5em;    
+    font-family: 'Sigmar', sans-serif;
+    font-weight: 800;
+    /* padding-bottom: 1.5rem; */
+    padding-right: 20%;
+    padding-left: 5%;
+    text-shadow: 5px 4px 6px darksalmon;
+    
+}
+
+#imagen-principal {
+    width: 8rem;
+    height: 8rem;
+    /* margin: unset; */
+}
+
+.encabezado {
+    display: flex;
+    
+}
+/* h1 , #imagen-principal {
+    display: inline-block;
+} */
+
+nav {
+    background-color: rgba(0,212,255,1);
+    /* margin:-2% 2% 0% 2%; */
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 2%;
+    text-align: justify;    
+}
+
+nav ul li a {
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #c7dbe0;
+    color: rgba(4, 14, 61, 0.667);
+    padding: 12px 2px;
+}
+
+.seccion-contenido {
+    display: flex;
+    min-height: 60vh;
+}
+
+.contenido {
+    width: 60%;
+    padding: .5rem 2rem;
+}
+
+.contenido article {
+    padding: 1rem .5rem;
+}
+.contenido article h2 {
+    font-family: 'Courier New', Courier, monospace;
+    color: rgba(22, 39, 71, 0.867);
+    padding-top: .5rem;
+    padding-bottom: .8rem;
+}
+
+.contenido article p {
+    text-align: justify;
+}
+
+aside {
+    background-color: rgb(152, 248, 248);    
+    width: 40%;
+}
+
+.contenido-aside {
+    padding: 2rem 3rem;
+}
+
+
+
+
+footer {
+    background-color: rgba(1, 25, 56, 0.856);
+    color: #e9f8f4;
+    padding: 2rem;
+    text-align: center;
+}
+
+
+
+.tabla {
+    border: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+table {
+    color:#110;
+    font-size: 14px;
+    table-layout: fixed;
+    border-collapse: collapse;
+}
+
+thead {
+    background: rgba(125, 189, 241, 0.4);
+}
+
+th {
+    padding: 20px 15px ;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+td {
+    padding: 15px;
+    border-bottom: solid 1px rgba(255, 255, 255, 0.2);
+}
+
+tbody tr {
+    cursor: pointer;
+}
+
+tbody tr th {
+    background: rgba(125, 189, 241, 0.4);
+    padding: 20px 15px ;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+tbody tr:hover {
+    background: rgba(71, 231, 236, 0.4);
+}
+
+.btn-nuevo-paseo {
+    padding: 1rem 2rem;
+    background-color: #1b3d46;
+    color: #e9f8f4;
+    text-decoration: none;
+    margin-left: 30%;
+}
+
+.titulo-paseos {
+    display: flex;
+    /* width: 90%; */
+    margin-bottom: 2rem;
+    margin-top: 2rem;
+    margin-left: 1rem;
+}
