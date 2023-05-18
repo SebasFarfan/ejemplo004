@@ -163,6 +163,7 @@ tbody tr:hover {
     margin-left: 30%;
 }
 
+
 /* se modifica cosas para paginas */
 /* algo */
 
@@ -170,6 +171,7 @@ tbody tr:hover {
 
 .titulo-paseos {
     display: flex;
+    max-width: 90%;
     /* width: 90%; */
     margin-bottom: 2rem;
     margin-top: 2rem;
