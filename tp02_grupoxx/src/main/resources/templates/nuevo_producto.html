@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nuevo Producto</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
+</head>
+<body>
+    <header th:replace="~{layouts/header :: header}"></header>
+    <nav th:replace="~{layouts/nav :: nav}"></nav>
+    <div class="seccion-contenido">
+        <section class="contenido">
+            <div class="seccion-formulario">
+                <h3>Registro de Producto</h3>
+                <form th:action="@{/producto/guardar}" th:object="${producto}" method="post">                    
+                    <!-- codigo de produto -->
+                    <div class="campos">
+                        <label for="codigo">Código:</label>
+                        <input type="number" id="codigo" th:field="*{codigo}">
+                    </div>
+                    <div class="campos">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" id="nombre" placeholder="Nombre Producto" th:field="*{nombre}">
+                    </div>
+                    <div class="campos">
+                        <label for="precio">Precio:</label>
+                        <input type="number" id="precio" th:field="*{precio}">
+                    </div>
+                    <div class="campos">
+                        <label for="categoria">Categoría:</label>
+                        <input type="text" id="categoria" placeholder="Ingrese categoria" th:field="*{categoria}">
+                    </div>
+                    <div class="campos">
+                        <label for="descuento">Descuento:</label>
+                        <input type="number" id="descuento" th:field="*{descuento}">
+                    </div>
+                    <div class="botones-formulario">
+                        <button type="submit">Guardar</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+        <aside th:replace="~{layouts/aside :: aside}"></aside>
+    </div>
+    <footer th:replace="~{layouts/footer :: footer}"></footer>
+</body>
+</html>

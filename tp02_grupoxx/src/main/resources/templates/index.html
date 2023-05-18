@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>index</title>
+    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
+    <link rel="stylesheet" th:href="@{/css/estilos.css}">
 </head>
+
 <body>
-    <header>
-        <h1>Página veterinaria</h1>
-        <img src="../static/images/veterinarian001.jpg" alt="simbolo veterinaria" title="veterinaria">
-    </header>
-    <nav>
+    
+    <header th:replace="~{layouts/header :: header}"></header>
+    <!-- <header>
+        <div class="encabezado">
+            <h1>Página veterinaria</h1>
+            <img id="imagen-principal" src="../static/images/veterinarian001.png" alt="simbolo veterinaria"
+                title="veterinaria">
+        </div>
+        <hr>
+    </header> -->
+    <nav th:replace="~{layouts/nav :: nav}"></nav>
+    <!-- <nav>
         <ul>
             <li><a href="index.html">Inicio</a></li>
             <li><a href="producto.html">Productos</a></li>
@@ -20,19 +31,46 @@
             <li><a href="sucursales.html">Sucursales</a></li>
             <li><a href="contacto.html">Contáctanos</a></li>
         </ul>
-    </nav>
-    <section>
-        <h2>subtitulo</h2>
-        <article>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dignissimos voluptates a ipsum, omnis vero hic. Voluptate ab ut dolorum reprehenderit fuga molestiae excepturi totam quis temporibus maiores, doloribus similique?</article>
-        <article>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt ipsum in delectus praesentium. Nemo fugit dolor corporis eum, totam perspiciatis sunt praesentium quo inventore porro dolore tenetur cumque sint.</article>
-    </section>
-    <aside></aside>
-    <footer>
+    </nav> -->
+    <div class="seccion-contenido">
+        <section class="contenido">
+            <article>
+                <h2>subtitulo</h2>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dignissimos voluptates a ipsum, omnis
+                    vero hic. Voluptate ab ut dolorum reprehenderit fuga molestiae excepturi totam quis temporibus
+                    maiores,
+                    doloribus similique?
+                </p>
+            </article>
+            <article>
+                <h2>subtitulo</h2>
+                <p>
+                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt ipsum in delectus
+                    praesentium. Nemo fugit dolor corporis eum, totam perspiciatis sunt praesentium quo inventore porro
+                    dolore
+                    tenetur cumque sint.
+                </p>
+            </article>
+        </section>
+        <aside th:replace="~{layouts/aside :: aside}"></aside>
+        <!-- <aside>
+            <div class="contenido-aside">
+                <h3>También te puede interesar</h3>
+                <p>Día del Animal</p>
+                <p>Vacunas</p>
+                <p>Zoonosis</p>
+            </div>
+        </aside> -->
+    </div>
+    <footer th:replace="~{layouts/footer :: footer}"></footer>
+    <!-- <footer>
         <p>Copyright 2023 - Nombre del sitio - Diseñado por Grupo 17 - Jujuy - República Argentina</p>
-    </footer>
+    </footer> -->
 
 
-    
-    
+
+
 </body>
+
 </html>
