@@ -171,9 +171,13 @@ tbody tr:hover {
 
 .titulo-paseos {
     display: flex;
-    max-width: 90%;
-    /* width: 90%; */
+    max-width: 90%;    
     margin-bottom: 2rem;
     margin-top: 2rem;
     margin-left: 1rem;
 }
+
+/* se agrega mas estilos */
+/* para las secciones */
+/* index */
+/* contactenos */
