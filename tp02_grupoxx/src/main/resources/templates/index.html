@@ -1,59 +1,42 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org" lang="es">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>index</title>
-    <link href="https://fonts.googleapis.com/css2?family=Sigmar&display=swap" rel="stylesheet">
-    <link rel="stylesheet" th:href="@{/css/estilos.css}">
-</head>
+<head th:replace="~{layouts/head :: head}"></head>
 
 <body>
-    
+
     <header th:replace="~{layouts/header :: header}"></header>
-    <!-- <header>
-        <div class="encabezado">
-            <h1>Página veterinaria</h1>
-            <img id="imagen-principal" src="../static/images/veterinarian001.png" alt="simbolo veterinaria"
-                title="veterinaria">
-        </div>
-        <hr>
-    </header> -->
+
     <nav th:replace="~{layouts/nav :: nav}"></nav>
-    <!-- <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li><a href="producto.html">Productos</a></li>
-            <li><a href="consejos_salud.html">Consejos de salud</a></li>
-            <li><a href="servicios_paseos.html">Servicios de paseo</a></li>
-            <li><a href="sucursales.html">Sucursales</a></li>
-            <li><a href="contacto.html">Contáctanos</a></li>
-        </ul>
-    </nav> -->
+
     <div class="seccion-contenido">
-        <section class="contenido">
-            <article>
-                <h2>subtitulo</h2>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dignissimos voluptates a ipsum, omnis
-                    vero hic. Voluptate ab ut dolorum reprehenderit fuga molestiae excepturi totam quis temporibus
-                    maiores,
-                    doloribus similique?
-                </p>
-            </article>
-            <article>
-                <h2>subtitulo</h2>
-                <p>
-                    Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt ipsum in delectus
-                    praesentium. Nemo fugit dolor corporis eum, totam perspiciatis sunt praesentium quo inventore porro
-                    dolore
-                    tenetur cumque sint.
-                </p>
-            </article>
-        </section>
-        <aside th:replace="~{layouts/aside :: aside}"></aside>
+        <div class="row fila-contenido">
+            <div class="col-sm-12 col-md-8 col-lg-8">
+                <section class="contenido">
+                    <article>
+                        <h2>subtitulo</h2>
+                        <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iste dignissimos voluptates a ipsum, omnis
+                            vero hic. Voluptate ab ut dolorum reprehenderit fuga molestiae excepturi totam quis temporibus
+                            maiores,
+                            doloribus similique?
+                        </p>
+                    </article>
+                    <article>
+                        <h2>subtitulo</h2>
+                        <p>
+                            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus nesciunt ipsum in delectus
+                            praesentium. Nemo fugit dolor corporis eum, totam perspiciatis sunt praesentium quo inventore porro
+                            dolore
+                            tenetur cumque sint.
+                        </p>
+                    </article>
+                </section>
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4 columna-aside">
+                <aside th:replace="~{layouts/aside :: aside}"></aside>
+            </div>
+        </div>
         <!-- <aside>
             <div class="contenido-aside">
                 <h3>También te puede interesar</h3>
@@ -69,8 +52,8 @@
     </footer> -->
 
 
-
-
+    
+    
 </body>
 
 </html>

@@ -70,12 +70,13 @@ nav a:hover {
 }
 
 .seccion-contenido {
-    display: flex;
+    /* display: flex; */
     min-height: 60vh;
 }
 
 .contenido {
-    width: 60%;
+    /* deshabilitar el width */
+    /* width: 60%; */
     padding: .5rem 2rem;
 }
 
@@ -93,15 +94,22 @@ nav a:hover {
     text-align: justify;
 }
 
-aside {
-    background-color: rgb(152, 248, 248);    
-    width: 40%;
-}
+/* aside { */
+    /* background-color: rgb(152, 248, 248);     */
+    /* desabilitar el ancho de aside */
+    /* width: 40%; */ 
+/* } */
 
 .contenido-aside {
     padding: 2rem 3rem;
 }
 
+.columna-aside {
+    background-color: rgb(152, 248, 248);
+}
+/* .row {
+    display: flex;
+} */
 
 
 
@@ -177,6 +185,12 @@ tbody tr:hover {
     margin-left: 1rem;
 }
 
+.formulario {
+    margin: 5rem;
+    padding: 5rem;
+    border-radius: 5px;
+    border: solid 1px #1b3d46;
+}
 /* se agrega mas estilos */
 /* para las secciones */
 /* index */
